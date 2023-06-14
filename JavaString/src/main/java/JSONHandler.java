@@ -4,7 +4,7 @@ import java.io.IOException;
 public class JSONHandler {
     String sourceFileName;
 
-    JSONHandler(String fileName) {
+    public JSONHandler(String fileName) {
         this.sourceFileName = fileName;
     }
 
