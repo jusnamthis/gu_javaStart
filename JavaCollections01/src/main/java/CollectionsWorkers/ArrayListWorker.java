@@ -84,6 +84,18 @@ public class ArrayListWorker {
         return sum / this._list.size();
     }
 
+    public Object[] toArray() {
+//        int[] arr = new int[this._list.size()];
+//
+//        for (int i = 0; i < this._list.size(); i++) {
+//            arr[i] = this._list.get(i);
+//        }
+//
+//        return arr;
+
+        return this._list.toArray();
+    }
+
     private boolean _checkIfListIsEmpty() {
         return this._list.size() > 0;
     }
