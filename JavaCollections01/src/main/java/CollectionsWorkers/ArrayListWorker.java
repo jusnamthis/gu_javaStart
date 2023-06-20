@@ -85,14 +85,6 @@ public class ArrayListWorker {
     }
 
     public Object[] toArray() {
-//        int[] arr = new int[this._list.size()];
-//
-//        for (int i = 0; i < this._list.size(); i++) {
-//            arr[i] = this._list.get(i);
-//        }
-//
-//        return arr;
-
         return this._list.toArray();
     }
 
