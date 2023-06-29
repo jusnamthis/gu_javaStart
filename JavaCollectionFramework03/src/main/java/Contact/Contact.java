@@ -17,17 +17,21 @@ public class Contact {
         this.numbers.add(number);
     }
 
+    public int getNumbersAmount() {
+        return this.numbers.size();
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
+        builder.append("*".repeat(10));
+        builder.append(String.format("\n%s:\n", this.contactName));
         for (PhoneNumber number : numbers) {
-            builder.append("\t");
-            builder.append(number.getPhoneNumber());
-            builder.append("-");
-            builder.append(number.getNumberInfo());
-            builder.append("\n");
+            builder.append(String.format("\t%s - %s\n", number.getPhoneNumber(), number.getNumberInfo()));
         }
+        builder.append("*".repeat(10));
+        builder.append("\n");
 
         return builder.toString();
     }

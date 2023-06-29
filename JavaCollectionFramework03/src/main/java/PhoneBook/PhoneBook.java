@@ -4,6 +4,7 @@ import Contact.Contact;
 import PhoneNumber.PhoneNumber;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class PhoneBook {
@@ -30,9 +31,12 @@ public class PhoneBook {
     }
 
     public void showContacts() {
-        for (var item : this.contacts.entrySet()) {
-            System.out.printf("%s\n%s", item.getKey(), item.getValue());
-            System.out.println();
+        ArrayList<Contact> contactsByNumbersAmount = new ArrayList<>(this.contacts.values());
+
+        contactsByNumbersAmount.sort((prev, next) -> next.getNumbersAmount() - prev.getNumbersAmount());
+
+        for (var contact: contactsByNumbersAmount) {
+            System.out.println(contact);
         }
     }
 
